@@ -105,7 +105,7 @@
 
 # <p style="display: flex; align-items: center; gap: 0.5em;"><span style="font-weight:bold; color: white; background-color: lightSeaGreen; padding: 0.5rem 2rem;">WRITE YOUR THINKING PROCESS BELOW.</span><span style="font-weight:bold; color: white; background-color: lightSeaGreen; padding: 0.5rem 0;">&nbsp;</span></p>
 
-## <span style="font-weight:bold; color: black; background-color: gold; padding: 0.5rem 2rem;">Thinking Process</span>
+## <span style="font-weight:bold; color: black; background-color: gold; padding: 0.5rem 2rem;">Thinking Process</span> 
 ### 1. Workflow Planning
 - สร้างกระดานบอร์ดเกมส์
 - แสดงกระดานบอร์ดเกมส์
@@ -116,16 +116,35 @@
 - ตรวจสอบกฏเกมส์ เป็นช่องว่างให้เดินต่อได้,ตกหลุมให้แพ้,ถ้าถึงหมวกชนะ
 - จบเกมส์และวนกลับไปเริ่มใหม่
 
+### 2.  Board Functions 
 ### 2.1. Board Functions (Hardcoded)
-- สร้างกระดานเป็น array 2 มิติ แบบคงที่
+- สร้างกระดานเป็น array 2 มิติ 
 - กำหนดค่าคงที่ที่จะวางในบอรด์ โดยกำหนด [PLAYER = "*" / EMPTY = "░" / HOLE = "O" / HAT = "^"]
-- สร้างบอร์ดเกมส์แบบกำหนดตำแหน่งเอง
+- แสดงบอร์ดเกมส์แบบกำหนดตำแหน่งค่าที่เราสร้างเอง
 
-### 2.2. Board Functions (Generated) 
-<!-- 3. Input Functions -->
-<!-- 4. Movement Functions -->
-<!-- 5. Game Rule Functions -->
-<!-- 6. Game Play Loop -->
+### 2.2. Board Functions (Generated)
+- สร้างกระดานเป็น array 2 มิติ
+- ใช้ฟังชั่นสุ่มการวางตำแหน่ง HOLE และ HAT
+- แสดงบอร์ดเกมส์
+
+### 3. Input Functions
+- รับ input จากผู้เล่น (w,a,s,d)
+- ตรวจสอบอ่านค่าว่าที่รับถูกต้องไหม
+- ส่งผลลัพธ์เป็นทิศทาง [w=บน , a=ซ้าย, s=ล่าง , d=ขวา]
+
+### 4. Movement Functions
+- รับค่า input
+- แปลง input เป็นทิศทาง
+- w ย้ายขึ้น 1 ช่อง / s ย้ายลง 1 ช่อง / a ย้ายซ้าย 1 ช่อง / d ย้ายขวา 1 ช่อง
+- อัปเดตตำแหน่งผู้เล่นใหม่
+
+### 5. Game Rule Functions
+- ตรวจสอบว่าการเดิน เลยขอบกระดานบอร์ดเกมส์ = แพ้ หรือ ตกหลุม = แพ้ หรือ ลงหมวก = ชนะ
+- ถ้าไม่ติดเงื่อนไขอัปเดตตำแหน่งว่าง
+- แสดงบอร์ดเกมส์ใหม่
+
+### 6. Game Play Loop
+- ทำการวนลูปคำสั่งในการเคลื่อนตำแหน่ง จนกว่าจะเจอ HAT หรือ HOLE แล้วออกจากลูป
 
 [Back to Table of Contents](#table-of-contents)
 
