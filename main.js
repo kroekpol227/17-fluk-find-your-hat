@@ -3,7 +3,7 @@ import promptSync from "prompt-sync";
 
 const prompt = promptSync({ sigint: true });
 
-// Board tiles
+// Board titles
 const PLAYER = "*";
 const EMPTY = "░";
 const HOLE = "O";
@@ -24,7 +24,9 @@ let playing = true;
 // Print board
 function printBoard(board) {
 	console.clear(); // call console.clear() before print each move
-	console.log(board);
+	console.log(board
+		.map(row=> row.join(" ")).join("\n")
+	);
 }
 
 // Game play loop

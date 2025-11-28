@@ -105,10 +105,23 @@
 
 # <p style="display: flex; align-items: center; gap: 0.5em;"><span style="font-weight:bold; color: white; background-color: lightSeaGreen; padding: 0.5rem 2rem;">WRITE YOUR THINKING PROCESS BELOW.</span><span style="font-weight:bold; color: white; background-color: lightSeaGreen; padding: 0.5rem 0;">&nbsp;</span></p>
 
-<!-- Thinking Process -->
-<!-- 1. Workflow Planning -->
-<!-- 2.1. Board Functions (Hardcoded) -->
-<!-- 2.2. Board Functions (Generated) -->
+## <span style="font-weight:bold; color: black; background-color: gold; padding: 0.5rem 2rem;">Thinking Process</span>
+### 1. Workflow Planning
+- สร้างกระดานบอร์ดเกมส์
+- แสดงกระดานบอร์ดเกมส์
+- วางตำแหน่งผู้เล่นเริ่มต้น
+- รับ input จากผู้เล่น (w,a,s,d)
+- แปลงค่า input ที่รับมาให้ทำตามคำสั่งที่เราตั้งไว้ในตัวแปร [w(ขึ้น),a(ซ้าย),s(ลง),d(ขวา)]
+- ขยับตำแหน่งผู้เล่น
+- ตรวจสอบกฏเกมส์ เป็นช่องว่างให้เดินต่อได้,ตกหลุมให้แพ้,ถ้าถึงหมวกชนะ
+- จบเกมส์และวนกลับไปเริ่มใหม่
+
+### 2.1. Board Functions (Hardcoded)
+- สร้างกระดานเป็น array 2 มิติ แบบคงที่
+- กำหนดค่าคงที่ที่จะวางในบอรด์ โดยกำหนด [PLAYER = "*" / EMPTY = "░" / HOLE = "O" / HAT = "^"]
+- สร้างบอร์ดเกมส์แบบกำหนดตำแหน่งเอง
+
+### 2.2. Board Functions (Generated) 
 <!-- 3. Input Functions -->
 <!-- 4. Movement Functions -->
 <!-- 5. Game Rule Functions -->
